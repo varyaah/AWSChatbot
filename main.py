@@ -4,7 +4,7 @@ randomly generate something.
 import discord
 import os
 import random
-from dotenv import load_dotenv #fFolder structure
+from dotenv import load_dotenv #Folder structure importing the token stirng.
 
 #Call the module. 
 load_dotenv()
@@ -54,7 +54,7 @@ async def on_message(message):#<--Passing info into function.
             await message.channel.send(f'Sooner! {username}')
         elif user_message.lower() == "tell me a joke":
                
-            #3 String array, await and randomly choose index.
+            #3 String array, await and randomly choose index of the array. 
             jokes = ["Can someone please shed more light on how my lamp got stolen?",
                      "Why is she called llene? She stands on equal legs.",
                      "What do you call a gazelle in a lions territory? Denzel."]
