@@ -61,8 +61,7 @@ async def on_message(message):#<--Passing info into function.
             await message.channel.send(random.choice(jokes))
             
 #Start execution by passing the token object. 
-client.run('MTE2ODE5NTkyNzU2NDA5NTQ4OA.GTTgzQ._UND-IQMgR1HDlOPVEQtpas-y665DBaLLV2qas')
+client.run('INSERT TOKEN STRING')
                                 
                                 
-#Intermediate Developer and Project Manager.     
             
