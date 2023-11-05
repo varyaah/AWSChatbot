@@ -4,15 +4,15 @@ randomly generate something.
 import discord
 import os
 import random
-from dotenv import load_dotenv #Folder structure importing the token stirng.
+#from dotenv import load_dotenv #Folder structure importing the token stirng.
 
 #Call the module. 
-load_dotenv()
+#load_dotenv()
 
 #Creation of a client object from the discord class, Bot subclass.
 #Insert the token for OAuth2. wow at my improvement! clap it up.
 client = discord.Bot()
-token = str(os.getenv('TOKEN'))
+#token = str(os.getenv('TOKEN'))
 
 '''Event Driven programming initiating the function when the client event connects to discord.
 Formatting of the string into the argument parameter with the brackets.
