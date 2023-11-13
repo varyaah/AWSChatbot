@@ -70,5 +70,5 @@ async def on_message(message):#<--Passing info into function.
             await message.channel.send(random.choice(jokes))
             
 #Start execution by passing the token object. 
-client.run('MTE2ODE5NTkyNzU2NDA5NTQ4OA.GmPSpe.gx-WxMV2ck-t9yuy_-phd9tSEjUhwnIehFiV2M')
+client.run('INSERT DISCORD TOKEN STRING')
 
