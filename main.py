@@ -4,6 +4,12 @@ randomly generate something.
 import discord
 import os
 import random
+#import requests 
+from ec2_metadata import ec2_metadata 
+
+print(ec2_metadata.region)
+print(ec2_metadata.instance_id)
+
 #from dotenv import load_dotenv #Folder structure importing the token stirng.
 
 #Call the module. 
@@ -11,6 +17,7 @@ import random
 
 #Creation of a client object from the discord class, Bot subclass.
 #Insert the token for OAuth2. wow at my improvement! clap it up.
+
 client = discord.Bot()
 #token = str(os.getenv('TOKEN'))
 
@@ -25,6 +32,8 @@ async def on_ready():
 '''Event driven by the client passing information needed to process. 
 #Creation of 3 objects first outputting a message in a string.
 Convert the objects with the string function, data type, indexing and splitting the string bc of #.'''
+
+#Thats not a developer. 
 
 @client.event
 async def on_message(message):#<--Passing info into function.
@@ -61,7 +70,5 @@ async def on_message(message):#<--Passing info into function.
             await message.channel.send(random.choice(jokes))
             
 #Start execution by passing the token object. 
-client.run('INSERT TOKEN STRING')
-                                
-                                
-            
+client.run('MTE2ODE5NTkyNzU2NDA5NTQ4OA.GmPSpe.gx-WxMV2ck-t9yuy_-phd9tSEjUhwnIehFiV2M')
+
