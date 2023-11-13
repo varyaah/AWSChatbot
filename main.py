@@ -33,8 +33,6 @@ async def on_ready():
 #Creation of 3 objects first outputting a message in a string.
 Convert the objects with the string function, data type, indexing and splitting the string bc of #.'''
 
-#Thats not a developer. 
-
 @client.event
 async def on_message(message):#<--Passing info into function.
     username = str(message.author).split("#")[0]
