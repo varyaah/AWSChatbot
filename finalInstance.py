@@ -15,7 +15,7 @@ print(ec2_metadata.instance_id)
 #Insert the token for OAuth2. wow at my improvement! clap it up.
 
 client = discord.Bot()
-token = str(os.getenv('TOKEN'))
+token = str(os.getenv('ANYTHING'))
 
 '''Event Driven programming initiating the function when the client event connects to discord.
 Formatting of the string into the argument parameter with the brackets.
