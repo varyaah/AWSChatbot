@@ -47,7 +47,7 @@ async def on_message(message):#<--Passing info into function.
     You can now just make any logic you want to. Remember, Case statements.
     '''
     
-    if channel == "random":
+    if channel == "blah-blah":
         if user_message.lower() == "boomer?" or user_message.lower() == "boomer?":
             await message.channel.send(f"Sooner! {username} Your EC2 Data: {ec2_metadata.region}") #format of string
             return #<--Fix: Returning values passed into the function.
@@ -61,5 +61,5 @@ async def on_message(message):#<--Passing info into function.
             await message.channel.send("Your instance data is" + ec2_metadata.region)
         
 #Start execution by passing the token object. 
-client.run(token)
+client.run(token 
 
