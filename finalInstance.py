@@ -12,10 +12,10 @@ print(ec2_metadata.instance_id)
 #from dotenv import load_dotenv #Folder structure importing the token stirng.
 
 #Creation of a client object from the discord class, Bot subclass.
-#Insert the token for OAuth2. wow at my improvement! clap it up.
+#Insert the token for OAuth2. 
 
 client = discord.Bot()
-token = str(os.getenv('ANYTHING'))
+token = str(os.getenv('TOKEN'))
 
 '''Event Driven programming initiating the function when the client event connects to discord.
 Formatting of the string into the argument parameter with the brackets.
@@ -61,5 +61,5 @@ async def on_message(message):#<--Passing info into function.
             await message.channel.send("Your instance data is" + ec2_metadata.region)
         
 #Start execution by passing the token object. 
-client.run(token 
+client.run(token)
 
