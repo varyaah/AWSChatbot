@@ -4,22 +4,23 @@ randomly generate something.
 import discord
 import os
 import random
-#import requests 
+import requests
+from os.path import join, dirname
+from dotenv import load_dotenv
 from ec2_metadata import ec2_metadata 
 
 print(ec2_metadata.region)
 print(ec2_metadata.instance_id)
 
-#from dotenv import load_dotenv #Folder structure importing the token stirng.
-
 #Call the module. 
-#load_dotenv()
+dotenv_path = join(dirname("__file__"), '.env')
+load_dotenv(dotenv_path)
 
 #Creation of a client object from the discord class, Bot subclass.
 #Insert the token for OAuth2. wow at my improvement! clap it up.
 
-client = discord.Bot()
-#token = str(os.getenv('TOKEN'))
+client = discord.Bot() # client
+token = os.getenv('TOKEN')
 
 '''Event Driven programming initiating the function when the client event connects to discord.
 Formatting of the string into the argument parameter with the brackets.
@@ -43,7 +44,8 @@ async def on_message(message):#<--Passing info into function.
     print(f'Message {user_message} by {username} on {channel}')
 
     #Client user is the bot right? if the user is the bot.
-    if message.author == client.user:
+    if username == client.user:
+        print("Ignoring")
         return 
     
     '''If the channel name is random run a bunch of conditional
@@ -51,16 +53,18 @@ async def on_message(message):#<--Passing info into function.
     You can now just make any logic you want to. Remember, Case statements.
     '''
     
-    if channel == "random":
+    if channel == "general":
         if user_message.lower() == "boomer?" or user_message.lower() == "boomer?":
+            print("responding 1")
             await message.channel.send(f"Sooner! {username}") #format of string
             return #<--Fix: Returning values passed into the function.
         
         #other string options
-        elif user_message.lower() == "hello?":
+        elif user_message.lower() == "hello world":
+            print("responding 2")
             await message.channel.send(f'Sooner! {username}')
         elif user_message.lower() == "tell me a joke":
-               
+            print("responding 3")
             #3 String array, await and randomly choose index of the array. 
             jokes = ["Can someone please shed more light on how my lamp got stolen?",
                      "Why is she called llene? She stands on equal legs.",
@@ -68,5 +72,5 @@ async def on_message(message):#<--Passing info into function.
             await message.channel.send(random.choice(jokes))
             
 #Start execution by passing the token object. 
-client.run('INSERT DISCORD TOKEN STRING')
+client.run(token)
 
